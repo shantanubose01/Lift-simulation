@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+/* MADE BY SHANTANU BOSE */
+:root {
+  --primary-color: #356eff;
+  --primary-color-light: #356eff;
+  --green-primary-color: yellow;
+  --green-secondary-color: yellow;
+  --yellow-primary-color: red;
+  --yellow-secondary-color: red;
+}
+
+/* navbar  */
+
+.nav-heading {
+  background-color: var(--primary-color);
+  margin: 0;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* body */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* input form styling */
+
+.input-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5%;
+  border: 3px solid var(--primary-color);
+  border-radius: 40px;
+  text-align: center;
+}
+
+.input-form input {
+  display: block;
+  width: 250px;
+  height: 30px;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.input-form label {
+  font-size: 20px;
+  margin-bottom: 10px; /* Adjust as needed for spacing between label and input */
+}
+
+.bold-600 {
+  font-weight: 600;
+}
+
+/* floors and lift whole container */
+
+.container {
+  box-sizing: border-box;
+}
+
+/* all btns styling */
+
+/* basic btn class */
+
+.btn {
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  box-shadow: 0 2px #999;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+/* up btn */
+
+.up-btn {
+  background-color: var(--green-primary-color);
+}
+
+.up-btn:hover {
+  background-color: var(--green-secondary-color);
+}
+
+.up-btn:active {
+  background-color: var(--green-secondary-color);
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+/* down btn */
+
+.down-btn {
+  background-color: var(--yellow-primary-color);
+}
+.down-btn:hover {
+  background-color: var(--yellow-secondary-color);
+}
+
+.down-btn:active {
+  background-color: var(--yellow-secondary-color);
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+/* this will create primary color buttons */
+
+.generate-btn {
+  background-color: var(--primary-color);
+  color: white;
+  width: 100px;
+  padding: 10px 5px;
+  margin: 10px auto;
+  border-radius: 50px;
+}
+
+.generate-btn:hover {
+  background-color: var(--primary-color-light);
+}
+
+.generate-btn:active {
+  background-color: var(--primary-color-light);
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
+
+/* lift */
+
+.lift {
+  background-color: red;
+  display: inline-block;
+  width: 5%;
+  max-width: 50px;
+  height: 90%;
+  border: 2px solid black;
+  margin-left: 10px;
+  margin-top: 5px;
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+}
+
+#lift-1 {
+  margin-left: 100px;
+}
+
+/* Doors */
+
+.left-door,
+.right-door {
+  background-color: #71797E;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: transform 2.5s ease-in-out;
+}
+
+.left-door {
+  transform-origin: right;
+  left: 0;
+}
+
+.right-door {
+  transform-origin: left;
+  right: 0;
+}
+
+/* Select the .left-door when the lift class also has open class.*/
+.lift.open .left-door {
+  transform: translateX(-100%);
+}
+
+.lift.open .right-door {
+  transform: translateX(100%);
+}
+
+/* floor */
+
+.floor {
+  display: flex;
+  background-color: white;
+  height: 100px;
+  box-sizing: border-box;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.floor-btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.floor-btn-container button {
+  width: 50px;
+  margin: 3px 0;
+}
+
+
+
